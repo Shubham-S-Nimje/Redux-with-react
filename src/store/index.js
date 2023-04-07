@@ -17,15 +17,4 @@ return state;
 
 const store = createStore(counterReducer);
 
-const countersubscriber = () => {
-    const latestState = store.getState();
-    console.log(latestState)
-};
-
-store.subscribe(countersubscriber);
-
-store.dispatch({type: 'incrementby2' });
-store.dispatch({type: 'decrementby2' });
-
-
 export default store;
